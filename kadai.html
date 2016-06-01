@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>bootstrap.少子化</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/one-page-wonder.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">ＴＯＰ</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#about">社会保障</a>
+                    </li>
+                    <li>
+                        <a href="#services">経済規模</a>
+                    </li>
+                    <li>
+                        <a href="#contact">家族関係</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <header background="hutan.jpg">
+        <div class="headline">
+            <div class="container">
+                <h1>少子化の影響</h1>
+
+                <span class="text-success"><font size="6">出生率の低下などにより引き起こされている少子化。ここでは少子化が引き起こす問題をいくつか挙げていきます。</font></span>
+                </h2>
+ <head>
+    <script type="text/javascript"
+          src="https://www.google.com/jsapi?autoload={
+            'modules':[{
+              'name':'visualization',
+              'version':'1',
+              'packages':['corechart']
+            }]
+          }"></script>
+
+    <script type="text/javascript">
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', '日本', 'アメリカ'],
+          ['1985',  1.76,      1.84],
+          ['1995',  1.42,      1.98],
+          ['2005',  1.26,       2.06],
+          ['2010',  1.39,      1.93]
+        ]);
+
+        var options = {
+          title: '出生率の推移',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="curve_chart" style="width: 900px; height: 500px" class="hidden-xs"></div>
+  </body>
+        </div>
+    </header>
+
+
+
+    <div class="container" id="about">
+
+        <hr class="featurette-divider">
+
+        <!-- First Featurette -->
+        <div class="featurette" >
+            <img class="featurette-image img-circle img-responsive pull-right" src="image/hutan.jpg">
+            <h2 class="featurette-heading" >社会保障
+                <span class="text-muted">少子化による社会保障負担の増大</span>
+            </h2>
+            <p class="lead">高齢化により社会保障給付費は2005年に100兆円、2010年に110兆円（税収の約4倍にあたる）と年々増加しており、2025年には約200兆円になると予想されています。実際、国民負担率も上昇しています。これからますます個人の負担は増えていくでしょう。</p>
+
+            <table class="table table-bordered">
+            <thead>
+                <tr>
+                <th>年</th>
+                <th>1970</th>
+                <th>1980</th>
+                <th>1990</th>
+                <th>2000</th>
+                <th>2010</th>
+                <th>2015</th>
+                </tr></thead>
+            <tbody>
+                <tr>
+                <td>国民負担率(%)</td>
+                <td>24.3</td>
+                <td>30.5</td>
+                <td>38.4</td>
+                <td>37.0</td>
+                <td>38.5</td>
+                <td>43.4</td></tr>
+                <tr>
+                <td>社会保障給付費(兆円)</td>
+                <td>3.5</td>
+                <td>24.8</td>
+                <td>47.2</td>
+                <td>78.1</td>
+                <td>110.2</td>
+                <td>116.0</td></tr></tbody></table>
+        </div>
+        <p>厚生労働省より</p>
+<div id="services"></div>
+        <hr class="featurette-divider">
+
+        <!-- Second Featurette -->
+        <div class="featurette" >
+            <img class="featurette-image img-circle img-responsive pull-left" src="image/kane.jpg">
+            <h2 class="featurette-heading">経済規模
+                <span class="text-muted">経済規模の縮小</span>
+            </h2>
+            <p class="lead">消費者が減少することにより、消費市場の縮小が考えられます。子供をターゲットとした事業モデルや教育、レジャー業の業績に特に大きな影響を与えるのではないでしょうか。また若年労働力人口も減少する見込みであるため、供給市場にも影響があるでしょう。</p>
+            <table class="table table-bordered"
+            <thead>
+            <tr>
+            <th>年</th>
+            <th>1980</th>
+            <th>1990</th>
+            <th>2000</th>
+            <th>2010</th>
+            <th>2015</th>
+            </tr></thead>
+        <tbody>
+        <tr>
+            <td>就業者数(万人)</td>
+            <td>6542</td>
+            <td>6588</td>
+            <td>6450</td>
+            <td>6314</td>
+            <td>5879</td></tr></tbody></table>
+        </div>
+<p>厚生労働省より</p>
+        <hr class="featurette-divider" id="contact">
+
+
+        <div class="featurette">
+            <img class="featurette-image img-circle img-responsive pull-right" src="image/kazoku.jpg">
+            <h2 class="featurette-heading">家族関係
+                <span class="text-muted">「家族」という形の希薄化</span>
+            </h2>
+            <p class="lead">世帯ごとの人数が減少し、単身者や子供のいない世帯が増加することが考えられるため、「家族」の形が変容するでしょう。それによって家族の支えあう機能の低下が懸念されます。またそれによる地域の防犯や消防などのコミュニティ機能の弱体化も問題となるでしょう。</p>
+            <table class="table table-bordered">
+            <thead>
+            <tr>
+            <th>年</th>
+            <th>1980</th>
+            <th>1990</th>
+            <th>2000</th>
+            <th>2010</th>
+            <th>2015</th></tr></thead>
+            <tbody>
+            <tr>
+            <td>単身者世帯数/総世帯数(%)</td>
+            <td>19.8</td>
+            <td>23.1</td>
+            <td>27.6</td>
+            <td>31.2</td>
+            <td>32.7</td>
+                </tr></tbody></table>
+        </div>
+<p>厚生労働省より</p>
+        <hr class="featurette-divider">
+
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p></p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
