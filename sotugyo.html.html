@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>高齢者の交通事故</title>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+
+
+
+    <div id="wrapper">
+
+
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        ■高齢者の交通事故■
+                    </a>
+                </li>
+                <li>
+                    <a href="#a1">交通事故死亡者数</a>
+                </li>
+                <li>
+                    <a href="#a2">交通手段</a>
+                </li>
+                <li>
+                    <a href="#a3">事故を減らすには</a>
+                  </li>
+                  <li>
+                      <a href="#a4">共創活動を通して</a>
+                </li>
+
+
+            </ul>
+        </div>
+
+
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>■高齢者の交通事故■</h1><br />
+                        <div id="a1"></div>
+
+
+
+
+
+<head>
+<h3>●高齢者の交通事故死亡者数</h3>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.3.0/p5.min.js"></script>
+<script>
+var x = 100,
+y = 100,
+angle1 = 0.0,
+segLength = 50;
+
+
+function setup() {
+createCanvas(1900, 100);
+strokeWeight(20.0);
+stroke(255, 100);
+}
+
+function draw() {
+background(100);
+
+dx = mouseX - x;
+dy = mouseY - y;
+angle1 = atan2(dy, dx);
+x = mouseX - (cos(angle1) * segLength);
+y = mouseY - (sin(angle1) * segLength);
+
+segment(x, y, angle1);
+ellipse(x, y, 20, 20);
+}
+
+function segment(x, y, a) {
+push();
+translate(x, y);
+rotate(a);
+line(0, 0, segLength, 0);
+pop();
+}
+
+</script>
+
+
+                        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                            <script type="text/javascript">
+                              google.charts.load('current', {'packages':['corechart']});
+                              google.charts.setOnLoadCallback(drawChart);
+                              function drawChart() {
+                                var data = google.visualization.arrayToDataTable([
+                                  ['Year', '全年齢層', '65歳以上'],
+                                  ['H17',6937,2955],
+                                  ['H18',6415,2840],
+                                  ['H19',5796,2749],
+                                  ['H20',5209,2523],
+                                  ['H21',4979,2483],
+                                  ['H22',4948,2489],
+                                  ['H23',4691,2309],
+                                  ['H24',4438,2279],
+                                  ['H25',4388,2309],
+                                  ['H26',4113,2193],
+                                  ['H27',4117,2247]
+                                ]);
+                                var options = {
+                                  title: '交通事故死亡者数推移',
+                                  curveType: 'function',
+                                  legend: { position: 'bottom' }
+                                };
+                                var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+                                chart.draw(data, options);
+                              }
+                            </script>
+                          </head>
+                          <body>
+                            <div id="curve_chart" style="width: 900px; height: 500px"></div>
+                          </body>
+
+
+
+<p>　　　　　★交通事故死亡者数は全体を見ると減少していますが、65歳以上の高齢者に着目するとあまり減少していないことがわかります。       　＊出典 <a href="https://www.e-stat.go.jp/SG1/estat/eStatTopPortal.do">e-Stat</a>
+<br />
+<br />
+<br />
+<div id="a2"></div>
+
+
+
+
+<h3>●高齢者の交通手段</h3><br />
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<canvas id="graph-area" height="500" width="900"></canvas>
+<script type="text/javascript">
+   // グラフの中身
+   var barChartData = {
+      labels : ["自動車","電車・バス","自転車","タクシー","家の近くの歩行","１５分以上の歩行","車いす"],
+      datasets : [
+         {
+            fillColor : "rgba(240,128,128,0.6)",    // 塗りつぶし色
+            strokeColor : "rgba(240,128,128,0.9)",  // 枠線の色
+            highlightFill: "rgba(255,64,64,0.75)",  // マウスが載った際の塗りつぶし色
+            highlightStroke: "rgba(255,64,64,1)",   // マウスが載った際の枠線の色
+            data : [ 57.4, 53.7, 37.4, 31.6, 26.7, 25.9 , 2.2 ]     // 各棒の値(カンマ区切りで指定)
+         },
+      ]
+   }
+   // 上記のグラフを描画するための記述
+   window.onload = function(){
+      var ctx = document.getElementById("graph-area").getContext("2d");
+      window.myBar = new Chart(ctx).Bar(barChartData);
+   }
+</script>
+
+
+
+<p>60歳以上の交通手段（複数回答可）             　＊出典 　<a href="http://www.mlit.go.jp/">国土交通省</a>　<a href="http://www.cao.go.jp/">内閣府</a>　</p>
+
+
+
+<div class="table-responsible">
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>自動車</th>
+        <th>電車・バス</th>
+        <th>自転車</th>
+        <th>タクシー</th>
+        <th>家の近くの歩行</th>
+        <th>１５分以上の歩行</th>
+        <th>車いす</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>%</td>
+          <td class="danger">57.4</td>
+          <td>53.7</td>
+          <td>37.4</td>
+          <td>31.6</td>
+          <td>26.7</td>
+          <td>25.9</td>
+          <td>2.2</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>　　　　　　　　　　　　　　　　　　　　★高齢者は自動車に頼る場面が多いことがわかります。</p><br />
+<br />
+<br />
+<div id="a3"></div>
+
+
+
+
+
+
+
+  <h3>●高齢者の交通事故を減らすには、、、？</h3>
+  <p>高齢化社会の中で高齢者の交通事故を減らすためには、公共交通機関の利用に対する補助金や買い物支援サービスなど、公共交通ネットワークの
+  再構築が必要となるのではないでしょうか。また免許を返したほうがよいような健康状態であるにも関わらず自動車を利用してしまう高齢者がいることを
+考え、高齢者の孤立の防止や、私たち自身時が来たら免許を返す心構えをすることが大切です。</p><br />
+<img src="image/car.jpg"><img src="image/family.jpg"><img src="image/crash.jpg">
+<br />
+<br />
+<div id="a4"></div>
+
+　<h3>●共創活動を通して</h3>
+　<p>共創活動では高齢化というテーマから未来の自動車について考えました。その中で自動運転技術の進歩や、自分たちの考えた車を社会に普及させることの難しさを
+  強く感じました。企業の利益を追求することばかりではなく、社会福祉としてこの高齢化社会と自動車がどう向き合うか、真剣に議論できたことはとてもよい経験とな
+  りました。完全自動運転が実現すれば、おそらく高齢者の起こす事故はほぼなくなるでしょう。しかし、自動車を運転することによる楽しさやわくわく感は完全自動運転
+  では味わうことができません。共創活動における他のグループの発表では、エンターテイメント性のある機能が印象に残りました。そうした運転＋αを届けることができ、
+  かつ高齢者が安心して乗車できる自動車の実現に期待したいです。
+<br />
+<br />
+<br />
+
+<h3>出典</h3>
+  <a href="http://www.mlit.go.jp/">国土交通省</a>
+  <a href="http://www.cao.go.jp/">内閣府</a>
+  <a href="https://www.e-stat.go.jp/SG1/estat/eStatTopPortal.do">e-Stat</a>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">メニュー</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="js/jquery.js"></script>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
